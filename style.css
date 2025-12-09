@@ -1,0 +1,374 @@
+body{
+
+}
+
+*{
+    cursor: url('images/—Pngtree—goldan\ 3d\ star\ emoji\ icon_13517547.png') 16 16, auto;
+}
+
+
+
+svg{
+    width: 40px;
+    height: 40px;
+}
+
+#nav{
+    position: fixed;
+    bottom:40px;
+    margin-left: 32%;
+    z-index: 10;
+    width: 500px;
+    background-color: rgba(0, 128, 255, 0.6);
+    border-radius: 20px;
+    
+}
+#navwrapper{
+    position:relative
+}
+#iconswrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.icondiv{
+    display: flex;
+    flex-direction: column;
+    transition: 0.2 ease-in-out;
+}
+
+.icondiv:hover{
+    
+    transform: rotateZ(20deg) scale(1.6);
+    
+    
+}
+
+#line{
+    height: 40px;
+    background-color: rgba(80, 203, 182, 0.8);
+    border-radius: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    
+}
+
+/* .btn:hover,
+.btn:focus,
+.btn:active { */
+ .btn {cursor:url('images/—Pngtree—goldan\ 3d\ star\ emoji\ icon_13517547.png') 16 16, pointer !important;
+}
+
+.bigdiv{
+    
+    width: 100%;
+    height: 100vh;
+    display: block;
+    
+}
+
+h1{
+    color: aqua;
+}
+
+.headertext{
+    
+
+  font-family: Courgette, cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+
+}
+
+.hometext{
+    line-height: 30px;
+    font-size: larger;
+}
+
+.navbar{
+    
+   height: 80px;
+   width: 100%;
+   
+   position: fixed;
+   top: 0;
+   background-color: red;
+}
+#navbarNav{
+    
+}
+
+#zanimage{
+    height: 60px;
+    width: 60px;
+    margin-right: 30px;
+    border-radius: 30%;
+    
+}
+
+.navbar-brand{
+    margin-left: 30px;
+}
+
+.bgvideodiv{
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+}
+video{
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+#div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.aboutmetext{
+    line-height: 35px;
+    
+}
+
+#div2{
+   
+    display: flex;
+    
+    
+}
+
+#div21, #div22{
+   
+   width: 50%;
+   height: 100%;
+   
+}
+#div22 p{
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: larger;
+}
+#div22{
+    display: flex;
+    align-items: center;
+
+    
+}
+
+#div221{
+    height: 50%;
+    width: 70%;
+    margin:  auto;
+    text-align: left;
+}
+
+#aboutmeimage{
+    width: 100%;
+    height: 100%;
+    filter:saturate(100%);
+    transition:filter 1s;
+    box-shadow: 7px 7px 20px rgba(98, 183, 209, 0.8) ;
+    
+}
+
+#aboutmeimage:hover{
+    filter:saturate(0)
+}
+
+.skillstext{
+    z-index: 2;
+    justify-self: center;
+    position: absolute;
+    margin-top: 400px;
+     font-family: Montserrat, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: larger;
+    line-height: 30px;
+
+}
+
+.div1content{
+    height: 300px;
+    width: 600px;
+    /* text-align: center; */
+}
+
+
+@keyframes fadein{
+    0%{
+        
+        
+        transform: translate3d(10px,10px,10px);
+        opacity:0;
+    }
+    20%{
+        
+        
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+    80%{
+       
+        
+         transform: translate3d(0,0,0);
+         opacity: 1;
+    }
+    100%{
+       
+        
+        transform: translate3d(-10px,-10px,-10px);
+        opacity: 0;
+    }
+}
+
+
+
+.animationFadeIn{
+animation-name: fadein;
+animation-duration: 4s;
+animation-timing-function: ease-in-out;
+}
+
+
+
+.div4 h2{
+    margin:0;
+    align-self: center;
+    height: 15%;
+}
+
+.projectcards{
+    position: relative;
+    width: 300px;
+    margin-top: 70px;
+    
+    
+}
+
+.cardd{
+    position:absolute;
+    width: 300px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    margin-left: 50px;
+    
+}
+
+.cardimage{
+    width: 100%;
+    height: 300px;
+}
+
+.cardtitle{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.carddescription{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#div4wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 85%;
+    
+    
+}
+
+#div4childwrapper1{
+    width: 50%;
+    flex: 5;
+    display: flex;
+    justify-content: center;
+   
+   
+    
+}
+
+#div4childwrapper2{
+    flex: 5;
+    
+    
+}
+
+.svg1{
+    flex:1;
+    align-self: center;
+}
+
+.svg2{
+    flex:1;
+    align-self: center;
+}
+
+
+
+@keyframes cardfadeout {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate3d(150px,0,0);
+        opacity: 0;
+    }
+}
+
+@keyframes cardfadein {
+    0%{
+        transform: translate3d(150px,0,0);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.cardfadeoutani{
+    animation: cardfadeout 1.5s ease-in-out ;
+}
+
+.cardfadeinani{
+    animation: cardfadein 1.5s ease-in-out;
+    
+}
+
+.font{
+    font-family: Montserrat, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.elementstoreveal{
+    opacity:0;
+    transform: translate3d(0,70px,0);
+    transition: all 1s ease-in-out;
+}
+
+.elementstoreveal.active{
+    opacity:1;
+    transform: translate3d(0,0,0);
+}
+
+#div5{
+    display: flex;flex-direction: column;justify-items: center;
+}
