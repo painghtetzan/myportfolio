@@ -96,6 +96,7 @@ function rightbutton(){
     
     setTimeout(()=>{
         cards[currentcard].style.opacity=0
+        cards[currentcard].classList.add('disable')
         currentcard++
     },1450)
 }
@@ -114,6 +115,7 @@ function leftbutton(){
     
     setTimeout(()=>{
         cards[currentcard-1].style.opacity=1
+        cards[currentcard-1].classList.remove('disable')
         currentcard--
     },1450)
 }

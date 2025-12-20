@@ -77,6 +77,18 @@ svg{
     
 }
 
+.mode{
+    width: 100%;
+    height: 400px;
+}
+
+.background{
+    width: 100%;
+    height: 100vb;
+    position: fixed;
+    z-index: 0;
+}
+
 h1{
     color: aqua;
 }
@@ -252,7 +264,10 @@ animation-timing-function: ease-in-out;
     align-self: center;
     height: 15%;
 }
-
+.projectdes{
+    line-height: 30px;
+    font-size: larger;
+}
 .projectcards{
     position: relative;
     width: 300px;
@@ -351,6 +366,9 @@ animation-timing-function: ease-in-out;
     
 }
 
+.disable{
+    pointer-events: none;
+}
 .font{
     font-family: Montserrat, sans-serif;
     font-optical-sizing: auto;
