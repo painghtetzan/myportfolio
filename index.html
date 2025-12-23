@@ -54,28 +54,52 @@
       </div>
     </div>
     
-    <!-- <div class="mode">
-      <div id="switchbutton">
-        <div id="b1"></div>
-        <div id="b2"></div>
-      </div>
-    </div>
-
-    <div class="background">
-      <div class="earthdiv">
-        <img src="images/world.png" alt="">
-      </div>
-    </div> -->
+    
+    <img src="./images/Asset 101.png" style="position: fixed; left: 50px; top: 50px; width: 40px; z-index:10 ;">
+        <div class="modebutton" onclick="switchbutton()">
+          <div id="buttoncontainer"></div>
+          <div id="switch"></div>
+        </div>
 
     <section class="bigdiv" id="div1">
-        <img src="./images/Asset 101.png" style="position: fixed; left: 50px; top: 50px; width: 40px; z-index:10 ;">
+        <div id="animationcontainer">
+          <div id="starandcloud">
+
+            <div id="stars">
+              <img src="images/st.png"alt="" class="starsimage" style="top: 10%; left: 10%;">
+              <img src="images/st.png"alt="" class="starsimage" style="top: 30%; left: 30%;">
+              <img src="images/st.png"alt="" class="starsimage" style="top: 12%; left: 25%;">
+              <img src="images/st.png"alt="" class="starsimage" style="top: 25%; left: 75%;">
+              <img src="images/st.png"alt="" class="starsimage" style="top: 15%; left: 80%;">
+              <img src="images/st.png"alt="" class="starsimage" style="top: 23%; left: 67%;">
+              <img src="images/st.png"alt="" class="starsimage" style="top: 16%; left: 55%;">
+              <img src="images/st.png"alt="" class="starsimage" style="top: 19%; left: 35%;">
+              <img src="images/st.png"alt="" class="starsimage" style="top: 28%; left: 45%;">
+            </div>
+
+            <div id="clouds">
+              <div class="cloudsimagediv" style="top: 10%; left: 10%;"><img src="images/cloud.png" alt="" class="cloudsimage cloudsgroup1" ></div>
+              <div class="cloudsimagediv" style="top: 20%; left: 20%;"><img src="images/cloud.png" alt="" class="cloudsimage cloudsgroup1" ></div>
+              <div class="cloudsimagediv" style="top: 10%; left: 35%;"><img src="images/cloud.png" alt="" class="cloudsimage cloudsgroup2" ></div>
+              <div class="cloudsimagediv" style="top: 21%; left: 50%;"><img src="images/cloud.png" alt="" class="cloudsimage cloudsgroup2" ></div>
+              <div class="cloudsimagediv" style="top: 14%; left: 80%;"><img src="images/cloud.png" alt="" class="cloudsimage cloudsgroup2" ></div>
+            </div>
+
+          </div>
+          <div id="moonandsun">
+          <img src="images/sun.png" alt="" style="width: 80px;" id="sun">
+          <img src="images/moon.png" alt="" style="width: 60px; opacity: 0;" id="moon">
+          </div>
+          
+        </div>
         <div class="div1content">
         <h1 class="elementstoreveal headertext" >Hi!, I am Paing Htet Zan, a wannabe Software Engineer.</h1>
         <p  class="elementstoreveal hometext font"   >My goal is to become a fullstack developer. I am willing to learn any new things, especially in IT industry, from anybody. I love coding. I love to find out how these codes work and how to make use of it. </p>
-        <button class="elementstoreveal" > About Me</button>
-        <button class="elementstoreveal"> Portfolio</button>
+        <a href="#div2"><button class="elementstoreveal buttons"  id="b1"> About Me</button></a>
+
+        <a href="#div4"><button class="elementstoreveal buttons" id="b2"> Portfolio</button></a>
         </div>
-      </section>
+    </section>
 
 
     <div class="bigdiv" id="div2" style="display: flex; flex-direction: row;">

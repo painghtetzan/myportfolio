@@ -255,3 +255,81 @@ function reveal(){
 }
 
 reveal()
+
+var nightmode = false;
+
+function switchbutton(){
+    const switchbutton = document.getElementById('switch')
+    const switchcontainer = document.getElementById('buttoncontainer')
+    const divs= document.querySelectorAll('.bigdiv')
+    const sun = document.getElementById('sun')
+    const moon = document.getElementById('moon')
+    const cloudgp1 = document.querySelectorAll('.cloudsgroup1')
+    const cloudgp2 = document.querySelectorAll('.cloudsgroup2')
+
+
+    cloudgp1.forEach(cloud=>{
+           cloud.classList.toggle('push1')
+        })
+    
+
+    cloudgp2.forEach(cloud=>{
+           cloud.classList.toggle('push2')
+        })
+
+
+    if(!nightmode){
+        switchbutton.style.left = '30px'
+        switchcontainer.style.backgroundColor = 'rgba(160, 178, 217, 0.8)'
+        
+        
+        moon.style.top = '0'
+        sun.style.top = '800px'
+        moon.style.opacity = 1
+
+        divs.forEach(div=>{
+            div.classList.add('nightmood')
+        })
+        document.getElementById('stars').style.opacity=1
+        
+        setTimeout(()=>{
+            sun.style.opacity = 0
+            
+            nightmode =!nightmode
+        },850)
+
+
+    }
+    
+    else{
+        switchbutton.style.left = '0'
+        switchcontainer.style.backgroundColor = 'white'
+        moon.style.top = '800px'
+        sun.style.top = '0'
+        sun.style.opacity = 1
+
+        divs.forEach(div=>{
+            div.classList.remove('nightmood')
+        })
+        document.getElementById('stars').style.opacity=0
+        
+
+        setTimeout(()=>{
+            moon.style.opacity = 0
+            nightmode = !nightmode
+        },850)
+    }
+}
+
+const stars = document.querySelectorAll('.starsimage')
+const clouds = document.querySelectorAll('.cloudsimagediv')
+
+stars.forEach(star=>{
+    const delay = Math.random() * 3
+    star.style.animationDelay = `${delay}s`
+})
+
+clouds.forEach(cloud=>{
+    const delay= Math.random() *3
+    cloud.style.animationDelay = `${delay}s`
+})
