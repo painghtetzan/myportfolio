@@ -103,6 +103,17 @@ function rightbutton(){
     
 }
 
+const cardimage = document.getElementById('cardimage')
+const originimage = './images/origin.jpg'
+const hoverimage = './images/shoe.jpg'
+cardimage.addEventListener('mouseenter',()=>{
+    cardimage.src = originimage
+})
+
+cardimage.addEventListener('mouseleave',()=>{
+    cardimage.src= hoverimage
+})
+
 
 function leftbutton(){
 
@@ -154,6 +165,7 @@ let movey = (Math.random() *2 ) * (Math.random() >0.5 ? 1 :-1)
 position.push({randomspotx:randomspotx,randomspoty:randomspoty,movex:movex,movey:movey})
 })
 
+
 function float(){
 boxes.forEach((box,i)=>{
     
@@ -161,7 +173,15 @@ boxes.forEach((box,i)=>{
     let setx = position[i].randomspotx +position[i].movex
     let sety = position[i].randomspoty +position[i].movey
    
+    if (setx <= 0) {
+    position[i].movex *= -1;
+    setx = 0;
+}
 
+if (setx >= container.clientWidth - box.clientWidth) { 
+    position[i].movex *= -1;
+    setx = container.clientWidth - box.clientWidth;
+}
 
     if(setx <=0){
         position[i].movex *=-1
@@ -183,7 +203,7 @@ boxes.forEach((box,i)=>{
         position[i].movey *=-1
         sety = container.clientHeight - box.offsetHeight
     }
-
+ 
     position.forEach((item,i)=>{
         position.forEach((smallitem,l)=>{
             if(i!==l){
@@ -204,7 +224,7 @@ boxes.forEach((box,i)=>{
     position[i].randomspoty = sety
 
     box.style.transform = `translate(${setx}px,${sety}px)`
-
+    
     
 })
 requestAnimationFrame(float)
@@ -215,21 +235,21 @@ float()
 
 
 const form = document.getElementById('contact-form')
-let status = document.getElementById('status')
+let statusform = document.getElementById('status')
 
 form.addEventListener('submit',function(e){
     e.preventDefault()
-    status.textContent = "Sending Message..."
+    statusform.textContent = "Sending Message..."
 
     emailjs.sendForm("service_b609m8t","template_tcf1y45",this).then(
         function(){
-            status.textContent="Sent Successfully"
+            statusform.textContent="Sent Successfully"
             form.reset()
         }
     ).catch(
         function(error){
             console.log("Error sending message",error)
-            status.textContent= 'Message sending failed.'
+            statusform.textContent= 'Message sending failed.'
         }
     )
 })

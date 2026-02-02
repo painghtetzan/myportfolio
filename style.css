@@ -3,7 +3,11 @@ body{
 }
 
 *{
-    cursor: url('images/—Pngtree—goldan\ 3d\ star\ emoji\ icon_13517547.png') 16 16, auto;
+    cursor: url('images/—Pngtree—goldan\ 3d\ star\ emoji\ icon_13517547.png') 10 10, auto;
+}
+:root {
+
+  --bg: rgb(165, 116, 26); 
 }
 
 html{
@@ -11,17 +15,21 @@ html{
 }
 
 
-svg{
-    width: 40px;
-    height: 40px;
-}
+
 
 #nav{
     position: fixed;
-    bottom:40px;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%); 
+                   
+    width: 70vh;
+
+    
+
     justify-self: center;
     z-index: 10;
-    width: 70vh;
+    
     background-color: rgba(0, 128, 255, 0.6);
     border-radius: 20px;
     
@@ -41,12 +49,14 @@ svg{
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    z-index: 100; 
 }
 
 .icondiv{
     display: flex;
     flex-direction: column;
     transition: 0.2 ease-in-out;
+    width: 40px;
 }
 
 .icondiv:hover{
@@ -105,6 +115,7 @@ svg{
     
     width: 100%;
     height: 100vh;
+    min-width: 560px;
     display: block;
     transition: all 1s ease-in-out;
     
@@ -170,6 +181,8 @@ h1{
     position: fixed;
     width: 100%;
     height: 100vh;
+    z-index: 0;
+    pointer-events: none;
     
 }
 
@@ -177,7 +190,7 @@ h1{
     position: absolute;
     width: 100%;
     height: 100vh;
-    
+    z-index: 0;
 }
 
 #stars{
@@ -272,11 +285,18 @@ h1{
     top: 0;
     opacity: 1;
     transition: top 1s ease-in;
+    margin-left: 50%;
+}
 
+#sunimage{
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 24, 24, 0.677),rgb(250, 250, 107),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0));
 }
 .div1content{
-    position: absolute;
-    align-self: center;
+    margin:auto;
+    width: min(1040px,90vw);
+    
 }
 
 .navbar-brand{
@@ -332,31 +352,102 @@ video{
 }
 
 #div2{
+   z-index: 2;
+}
+
+#div2container{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+   width: min(1040px,90vw); 
+   display: flex;
+   align-items: center;
    
-    display: flex;
+}
+
+#div2card{
+    width: 100%;
+    height: 60%;
+    margin: auto;
     
+    background:
+     /* 1. AMBIENT GLOW: soft aqua light from top-left */
+  radial-gradient(
+    1000px 500px at 15% -15%,
+    rgba(255, 220, 180, 0.35),
+    transparent 70%
+  ),
+
+  /* 2. CORE COLOR: rich amber-orange focus on the right */
+  radial-gradient(
+    800px 600px at 85% 10%,
+    rgba(230, 140, 40, 0.28),
+    transparent 60%
+  ),
+
+  /* 3. DEPTH: deep burnt-orange shadow from the bottom */
+  radial-gradient(
+    900px 500px at 40% 115%,
+    rgba(90, 45, 10, 0.45),
+    transparent 70%
+  ),
+
+  /* 4. BASE */
+  var(--bg);
+    clip-path: polygon(
+    6% 0%,
+    1.5% 10%,
+    1.5% 60%,
+    0% 64%,
+    0% 96%,
+    1.5% 100%,
+    94% 100%,
+    98.5% 90%,
+    98.5% 40%,
+    100% 36%,
+    100% 4%,
+    98.5% 0%
+    );
+
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+}
+
+#cardimagediv{
+    
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    
+    
+}
+#cardinfo{
+    padding: 10%; 
     
 }
 
-#div21{
-    padding: 1vh;
-    display: flex;
+#cardinfo p{
+    
+    font-family: Montserrat, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: large;
+    line-height: 30px;
 }
 
-#div22{
-    display: flex;
-    
-    
-    
+#cardimage {
+    width: 80%;
+    height: 60%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
 }
 
-#div221{
-    height: 50%;
-    width: 70%;
-    margin:  1vh;
-    margin-top: 1vh;
-    text-align: left;
-}
+
 
 
 
@@ -376,24 +467,41 @@ video{
 }
 
 #div3{
-    position: relative;
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
     
+    
+}
+.floatbox {
+    width: 7%;
+    position: absolute;
+    
+    margin: 0;
+    display: block; 
 }
 
 #skillscontainer{
-    z-index: 2;
-    
+    z-index: 10; 
     position: absolute;
     
-    justify-self: center;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(109, 111, 88, 0.8);
+    background-color: var(--bg);
     width: 60vh;
     height: 40vh;
     border-radius: 10px;
+    padding: 20px;
+    text-align: center;
 }
 
 .skillstext{
@@ -412,11 +520,6 @@ video{
 
 }
 
-.div1content{
-    height: 300px;
-    width: 60%;
-    /* text-align: center; */
-}
 
 
 @keyframes fadein{
@@ -464,8 +567,10 @@ animation-timing-function: ease-in-out;
 .projectdes{
     line-height: 30px;
     font-size: larger;
+    
 }
 .projectcards{
+    
     position: relative;
     width: 300px;
     margin-top: 70px;
@@ -473,14 +578,34 @@ animation-timing-function: ease-in-out;
     
 }
 
+
+
+#div4wrapper{
+
+    display: flex;
+    flex-direction: row;
+    height: 85%;
+    
+    
+}
+
+#div4childwrapper1{
+    
+    flex: 4;
+    display: flex;
+    justify-content: center;
+   
+   
+    
+}
 .cardd{
     position:absolute;
     width: 45vh;
-    background-color: aliceblue;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 5px;
     border: 1px solid black;
     margin-left: 50px;
-    
+    backdrop-filter: blur(60px);
 }
 
 .cardimage{
@@ -498,27 +623,6 @@ animation-timing-function: ease-in-out;
     margin-top: 10px;
     margin-bottom: 20px;
 }
-#div4{
-    position: relative;
-    
-}
-#div4wrapper{
-    display: flex;
-    flex-direction: row;
-    height: 85%;
-    
-    
-}
-
-#div4childwrapper1{
-    
-    flex: 5;
-    display: flex;
-    justify-content: center;
-   
-   
-    
-}
 
 #div4childwrapper2{
     flex: 5;
@@ -526,13 +630,57 @@ animation-timing-function: ease-in-out;
     align-items: center;
     
     
+    
+}
+#projectdes{
+    background-color: aqua;
+    width: 75%;
+    padding: 5%;
+     background:
+     
+  radial-gradient(
+    1000px 500px at 15% -15%,
+    rgba(255, 220, 180, 0.35),
+    transparent 70%
+  ),
+
+  
+  radial-gradient(
+    800px 600px at 85% 10%,
+    rgba(230, 140, 40, 0.28),
+    transparent 60%
+  ),
+
+ 
+  radial-gradient(
+    900px 500px at 40% 115%,
+    rgba(90, 45, 10, 0.45),
+    transparent 70%
+  ),
+
+  /* 4. BASE */
+  var(--bg);
+    clip-path: polygon(
+    6% 0%,
+    1.5% 10%,
+    1.5% 60%,
+    0% 64%,
+    0% 96%,
+    1.5% 100%,
+    94% 100%,
+    98.5% 90%,
+    98.5% 40%,
+    100% 36%,
+    100% 4%,
+    98.5% 0%
+    );
 }
 
 .svg1{
     position: absolute;
     align-self: center;
     left: 2vh;
-    scale: 2;
+    scale: 1;
     z-index: 10;
 }
 
@@ -540,7 +688,7 @@ animation-timing-function: ease-in-out;
     position: absolute;
     align-self: center;
     right: 2vh;
-    scale: 2;
+    scale: 1;
     z-index: 10;
 }
 
@@ -597,115 +745,36 @@ animation-timing-function: ease-in-out;
 }
 
 #div5{
-    display: flex;flex-direction: column;justify-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
 }
 
 
 
 @media(max-width:767px){
-    .headertext{
-        font-size: smaller;
-    }
-    .hometext{
-        font-size: 10px;
-        line-height: 18px;
-    }
     
-    #div2{
-        height: 50vh;
-    }
-    #div3{
-        height: 70vh;
-    }
-    #div21{
-        display: none;
-    }
-
     
-    #div22{
-        width: 80%;
-        align-self: center;
-        justify-content: center
-    }
-    #div221{
-        width: 70%;
-        
-        justify-content: center;
-    }
-    #title{
-        font-size: smaller;
-    }
-    .aboutmetext{
-        width: 70vh;
-        font-size: 10px;
-        line-height: 18px;
-    }
-
-    #skills{
-    font-size: large;
 
     
 }
 
-    .skillstext{
-        
-        font-size: 10px;
-        line-height: 15px;
-    }
+    
+    
 
-    #div4wrapper{
-        flex-direction: column;
-    }
-    #div4{
-        height: 150vh;
-    }
 
-    svg{
-       top: 40vh;
-    }
-
-}
 
 @media(min-width:768px){
-    #div22{
-        width:60%;
-    }
-    #div21{
-        width: 40%;
-    }
-    #aboutmetext{
-        font-size: 15px;
-    }
+   
 
     
 }
 
 @media(min-width:992px){
-#div21, #div22{
-   
-   width: 50%;
-   height: 100%;
-   
-}
 
-#div21{
-    display: flex;
-    padding: 0;
-    
-}
 
-#aboutmeimage{
-    width: 70%;
-    height: 70%;
-    justify-self: right
-};
 
-#div22 p{
-    width: 100%;
-    margin: 0 auto;
-    text-align: left;
-    font-size: larger;
-}
 
 
 
