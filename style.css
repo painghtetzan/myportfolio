@@ -7,7 +7,7 @@ body{
 }
 :root {
 
-  --bg: rgb(165, 116, 26); 
+  --bg: coral; 
 }
 
 html{
@@ -557,7 +557,33 @@ animation-duration: 4s;
 animation-timing-function: ease-in-out;
 }
 
+#certifications{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
+.certificate{
+    width: 300px;
+    border-radius: 20px;
+}
+#c1{
+    background-color: aqua;
+    height: 250px;
+}
+
+#c2{
+    background-color: coral;
+}
+ .certificate img{
+    width: 300px;
+ }
+
+ .certificate h3{
+
+ }
 
 .div4 h2{
     margin:0;
