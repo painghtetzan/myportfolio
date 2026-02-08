@@ -281,7 +281,8 @@ var nightmode = false;
 function switchbutton(){
     const switchbutton = document.getElementById('switch')
     const switchcontainer = document.getElementById('buttoncontainer')
-    const divs= document.querySelectorAll('.bigdiv')
+    const div= document.querySelector('.fixedbg')
+    console.log(div)
     const sun = document.getElementById('sun')
     const moon = document.getElementById('moon')
     const cloudgp1 = document.querySelectorAll('.cloudsgroup1')
@@ -307,9 +308,9 @@ function switchbutton(){
         sun.style.top = '800px'
         moon.style.opacity = 1
 
-        divs.forEach(div=>{
-            div.classList.add('nightmood')
-        })
+       
+        div.classList.add('nightmood')
+    
         document.getElementById('stars').style.opacity=1
         
         setTimeout(()=>{
@@ -328,9 +329,9 @@ function switchbutton(){
         sun.style.top = '0'
         sun.style.opacity = 1
 
-        divs.forEach(div=>{
-            div.classList.remove('nightmood')
-        })
+        
+        div.classList.remove('nightmood')
+        
         document.getElementById('stars').style.opacity=0
         
 

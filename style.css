@@ -7,7 +7,7 @@ body{
 }
 :root {
 
-  --bg: coral; 
+  --bg:  rgba(255, 255, 255, 0.05);; 
 }
 
 html{
@@ -118,6 +118,7 @@ html{
     min-width: 560px;
     display: block;
     transition: all 1s ease-in-out;
+    background-color: transparent !important;
     
 }
 
@@ -173,8 +174,22 @@ h1{
     border-radius: 30%;
     
 }
+
+.fixedbg{
+    position: fixed;
+    background-color: #F5F5F7;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+
 #div1{
-    position: relative;
+    
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #animationcontainer{
@@ -278,11 +293,13 @@ h1{
 #moon{
     position: absolute;
     top: 800px;
+    margin-left: 55%;
     transition: top 1s ease-in;
 }
 #sun{
-    position: absolute;
-    top: 0;
+    position: fixed;
+    
+
     opacity: 1;
     transition: top 1s ease-in;
     margin-left: 50%;
@@ -314,12 +331,7 @@ video{
     padding: 0;
     margin: 0;
 }
-#div1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+
 
 .modebutton{
     position: fixed;
@@ -361,39 +373,42 @@ video{
     margin: auto;
    width: min(1040px,90vw); 
    display: flex;
-   align-items: center;
+   align-items:center;
    
 }
 
 #div2card{
+    
     width: 100%;
     height: 60%;
-    margin: auto;
-    
-    background:
+    margin-top: 140px;
+  
+
+    background: linear-gradient(to right, #deffe5,#d0f3dd,#d6fce7);
+    backdrop-filter: blur(60px);
      /* 1. AMBIENT GLOW: soft aqua light from top-left */
-  radial-gradient(
+  /* radial-gradient(
     1000px 500px at 15% -15%,
     rgba(255, 220, 180, 0.35),
     transparent 70%
-  ),
+  ), */
 
   /* 2. CORE COLOR: rich amber-orange focus on the right */
-  radial-gradient(
+  /* radial-gradient(
     800px 600px at 85% 10%,
     rgba(230, 140, 40, 0.28),
     transparent 60%
-  ),
+  ), */
 
   /* 3. DEPTH: deep burnt-orange shadow from the bottom */
-  radial-gradient(
+  /* radial-gradient(
     900px 500px at 40% 115%,
     rgba(90, 45, 10, 0.45),
     transparent 70%
-  ),
+  ), */
 
   /* 4. BASE */
-  var(--bg);
+  /* var(--bg); */
     clip-path: polygon(
     6% 0%,
     1.5% 10%,
@@ -558,11 +573,14 @@ animation-timing-function: ease-in-out;
 }
 
 #certifications{
-    
+    position: relative;
+    z-index: 2;
     width: 100%;
+    height: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
 }
 
 .certificate{
