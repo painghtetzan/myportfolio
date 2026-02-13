@@ -56,7 +56,21 @@ function addclass(){
 
 addclass()
 
+const extras = [
+    "Jest", "Vitest", "Storybook", "Webpack", "Vite",
+    "Figma", "tRPC", "WebSockets", "Stripe API", "Supabase",
+    "Firebase", "Drizzle ORM", "Zod", "ESLint", "Prettier",
+    "Git", "Linux", "Nginx", "Notion API", "OpenAI API"
+  ];
 
+  const track = document.getElementById('ticker');
+  const items = [...extras, ...extras]; // duplicate for infinite scroll
+  items.forEach(t => {
+    const el = document.createElement('span');
+    el.className = 'ticker-item';
+    el.innerHTML = `<span class="dot"></span>${t}`;
+    track.appendChild(el);
+  });
 const maxHeight = document.documentElement.scrollHeight - window.innerHeight
 
 function setWidth(percentage){
@@ -151,7 +165,7 @@ document.addEventListener('mousemove',(e)=>{
 
 
 const boxes = document.querySelectorAll('.floatbox')
-const container = document.getElementById('div3')
+const container = document.getElementById('floaticons')
 
 
 const position = []
